@@ -30,3 +30,20 @@
 --JOIN Gender gen
 --	ON a.GenderId = gen.Id
 --ORDER BY a.Name;
+
+--STEP 7:
+--SELECT SUM(WordCount) as totalWords
+--FROM Poem;
+
+--STEP 8:
+--SELECT TOP(1) Title, CharCount
+--FROM Poem
+--ORDER BY Poem.CharCount;
+
+--STEP 9:
+--SELECT COUNT(Author.Id) as numAuthors, g.Name
+--FROM Author
+--Join Grade g
+--	ON Author.GradeId = g.Id
+--WHERE g.Name = '3rd Grade'
+--GROUP BY g.Name;
