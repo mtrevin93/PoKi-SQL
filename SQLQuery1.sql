@@ -97,13 +97,19 @@
 --GROUP BY a.Name
 --ORDER BY COUNT(p.Id) DESC;
 
-STEP 16:
-SELECT COUNT(p.Id) PoemCount, e.Name
-FROM PoemEmotion pe
-JOIN Poem p
-	ON pe.PoemId = p.Id
-JOIN Emotion e
-	ON pe.EmotionId = e.Id
-WHERE e.Name = 'sadness'
-GROUP BY e.Name;
-	
+--STEP 16:
+--SELECT COUNT(p.Id) PoemCount, e.Name
+--FROM PoemEmotion pe
+--JOIN Poem p
+--	ON pe.PoemId = p.Id
+--JOIN Emotion e
+--	ON pe.EmotionId = e.Id
+--WHERE e.Name = 'sadness'
+--GROUP BY e.Name;
+
+--STEP 17:
+--SELECT COUNT(p.Id) PoemCount
+--FROM PoemEmotion pe
+--RIGHT JOIN Poem p
+--	ON pe.PoemId = p.Id
+--WHERE pe.EmotionId IS NULL
