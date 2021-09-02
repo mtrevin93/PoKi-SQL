@@ -90,4 +90,9 @@
 --ORDER BY WordCount DESC
 
 STEP 15:
-
+SELECT TOP(10) a.Name, COUNT(p.Id) as PoemCount
+FROM Author a
+JOIN Poem p
+	ON a.Id = p.AuthorId
+GROUP BY a.Name
+ORDER BY COUNT(p.Id) DESC;
