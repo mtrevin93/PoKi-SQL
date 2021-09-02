@@ -124,17 +124,32 @@
 --GROUP BY e.Name
 --ORDER BY COUNT(p.Id) DESC;
 
-STEP 19:
-SELECT TOP(1) g.Name, e.name, COUNT(p.Id) as PoemCount
-FROM Poem p
-	JOIN PoemEmotion pe
-		ON p.Id = pe.PoemId
-		JOIN Emotion e
-			ON pe.EmotionId = e.Id
-	JOIN Author
-		ON p.AuthorId = Author.Id
-		JOIN Grade g 
-			ON Author.GradeId = g.Id
-WHERE e.Name = 'Joy'
-GROUP BY g.Name, e.Name
-ORDER BY COUNT(p.Id) DESC;
+--STEP 19:
+--SELECT TOP(1) g.Name, e.name, COUNT(p.Id) as PoemCount
+--FROM Poem p
+--	JOIN PoemEmotion pe
+--		ON p.Id = pe.PoemId
+--		JOIN Emotion e
+--			ON pe.EmotionId = e.Id
+--	JOIN Author
+--		ON p.AuthorId = Author.Id
+--		JOIN Grade g 
+--			ON Author.GradeId = g.Id
+--WHERE e.Name = 'Joy'
+--GROUP BY g.Name, e.Name
+--ORDER BY COUNT(p.Id) DESC;
+
+--STEP 20:
+--SELECT TOP(1) g.Name, e.name, COUNT(p.Id) as PoemCount
+--FROM Poem p
+--	JOIN PoemEmotion pe
+--		ON p.Id = pe.PoemId
+--		JOIN Emotion e
+--			ON pe.EmotionId = e.Id
+--	JOIN Author
+--		ON p.AuthorId = Author.Id
+--		JOIN Grade g 
+--			ON Author.GradeId = g.Id
+--WHERE e.Name = 'Fear'
+--GROUP BY g.Name, e.Name
+--ORDER BY COUNT(p.Id);
