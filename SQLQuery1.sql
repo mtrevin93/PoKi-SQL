@@ -113,3 +113,13 @@
 --RIGHT JOIN Poem p
 --	ON pe.PoemId = p.Id
 --WHERE pe.EmotionId IS NULL
+
+--STEP 18:
+--SELECT TOP(1) e.Name, COUNT(p.Id) as PoemCount
+--FROM PoemEmotion pe
+--JOIN Poem p
+--	ON pe.PoemId = p.Id
+--JOIN Emotion e
+--	ON pe.EmotionId = e.Id
+--GROUP BY e.Name
+--ORDER BY COUNT(p.Id) DESC;
