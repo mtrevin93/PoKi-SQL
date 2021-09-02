@@ -47,3 +47,13 @@
 --	ON Author.GradeId = g.Id
 --WHERE g.Name = '3rd Grade'
 --GROUP BY g.Name;
+
+STEP 10:
+SELECT COUNT(Author.Id) as numAuthors, g.Name
+FROM Author
+Join Grade g
+	ON Author.GradeId = g.Id
+WHERE g.Name = '3rd Grade'
+	OR g.Name = '1st Grade' 
+	OR g.Name = '2nd Grade'
+GROUP BY g.Name;
