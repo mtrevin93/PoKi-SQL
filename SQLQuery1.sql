@@ -58,12 +58,36 @@
 --	OR g.Name = '2nd Grade'
 --GROUP BY g.Name;
 
-STEP 11:
-SELECT COUNT(Poem.Id) as PoemCount, g.Name
-FROM Author
-JOIN Poem
-	ON Author.Id = Poem.AuthorId
-JOIN Grade g
-	ON Author.GradeId = g.Id
-WHERE g.Name = '4th Grade'
-GROUP BY g.Name
+--STEP 11:
+--SELECT COUNT(Poem.Id) as PoemCount, g.Name
+--FROM Author
+--JOIN Poem
+--	ON Author.Id = Poem.AuthorId
+--JOIN Grade g
+--	ON Author.GradeId = g.Id
+--WHERE g.Name = '4th Grade'
+--GROUP BY g.Name
+
+--STEP 12:
+--SELECT COUNT(Poem.Id) as PoemCount, g.Name
+--FROM Author
+--JOIN Poem
+--	ON Author.Id = Poem.AuthorId
+--JOIN Grade g
+--	ON Author.GradeId = g.Id
+--GROUP BY g.Name
+
+--STEP 13:
+--SELECT COUNT(Author.Id) as AuthorCount, g.Name
+--FROM Author
+--JOIN Grade g
+--	ON Author.GradeId = g.Id
+--GROUP BY g.Name
+
+--STEP 14:
+--SELECT TOP(1) Title, WordCount
+--FROM Poem
+--ORDER BY WordCount DESC
+
+STEP 15:
+
