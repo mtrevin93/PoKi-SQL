@@ -90,12 +90,12 @@
 --ORDER BY WordCount DESC
 
 --STEP 15:
---SELECT TOP(10) a.Name, COUNT(p.Id) as PoemCount
+--SELECT TOP(10) a.Name, a.Id, COUNT(p.Id) as PoemCount
 --FROM Author a
 --JOIN Poem p
 --	ON a.Id = p.AuthorId
---GROUP BY a.Name
---ORDER BY COUNT(p.Id) DESC;
+--GROUP BY a.Id, a.Name
+--ORDER BY PoemCount DESC;
 
 --STEP 16:
 --SELECT COUNT(p.Id) PoemCount, e.Name
@@ -148,8 +148,8 @@
 --			ON pe.EmotionId = e.Id
 --	JOIN Author
 --		ON p.AuthorId = Author.Id
---		JOIN Grade g 
---			ON Author.GradeId = g.Id
+--		JOIN Gender g 
+--			ON Author.GenderId = g.Id
 --WHERE e.Name = 'Fear'
 --GROUP BY g.Name, e.Name
 --ORDER BY COUNT(p.Id);
